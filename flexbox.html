@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Demo-Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="Text/css">
+        main {display: flex;}
+        main nav {
+            width: 40%;
+            
+            background-color: aqua;
+        }
+        main div.content {
+            
+            width: 60%;
+            background-color: aquamarine;
+        }
+        footer{
+            clear: both;
+
+        }
+        header nav {text-align: center;}
+        header nav ul li { display: inline; }
+
+        footer nav {text-align: center;}
+        footer nav ul li { display: inline; }
+        @media screen and (max-width: 767px) {
+            main { display: block; }
+            main nav, main div.content { width: 100%; }
+            header nav ul li { display: block; }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./index2.html">Another Page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav>
+
+   
+            <h1>Welcome</h1>
+            <h2>Message</h2>
+
+<p>Hallo, dieser Text nutzt <span id="mySpan" style="color: blue;">span</span>.</p>
+        </nav>
+<div class="content">
+<table border="1" width="90%">
+    <tr>
+        <th align="right">Text</th>
+        <th >mehr Text</th>
+    </tr>
+    <tr>
+        <td colspan="2"  id="myID">Ganz viel Text drunter</td>
+    </tr>
+    <tr>
+
+       
+        <td><img src = "https://upload.wikimedia.org/wikipedia/commons/c/c0/Slippers_%28AM_2015.51.15-2%29.jpg" width="50%"></td>
+        <td>Image: Auckland Museum, CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>, via Wikimedia Commons</td>
+    </tr>
+</table>
+</div>
+</main>
+<footer><nav><ul>
+    <li>Impressum</li>
+    <li>Contact</li>
+</ul>
+</nav></footer>
+</body>
+</html>
+
