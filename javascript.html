@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        DemoPage
+    </title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        let clickNr = 0;
+
+        function load_body(){
+            console.log("Body wird geladen...");
+
+            console.log("A string", "Hello World");
+            console.log("A boolean ", false);
+            console.log("A null-value ", null);
+            console.log("An Array ", [1,2,3]);
+            console.log("An Stringarray ", ["eins","zwei","drei"]);
+            
+            const meinObjekt = {Name: "Max", Alter: 25, Hobbies: ["Lesen", "Sport"]};
+            console.log("An Object: ", meinObjekt);
+
+            console.log("Body geladen");
+        }
+        function clicked(){
+            clickNr = clickNr +1; 
+            document.getElementById("Heading").innerHTML = "Hallo Welt! "+clickNr;
+        }
+
+        function showAlert(){
+            let input = document.querySelector('#Inputvalue').value;
+            if (String(input).length >10){
+                alert("Mehr als 10 Zeichen!");
+            }
+        }
+
+        function generate(){
+            liste = document.querySelector("#list");
+            liste.innerHTML="";
+            for (let i=1; i<=clickNr; i++){
+                const listItem = document.createElement("li");
+                listItem.appendChild(document.createTextNode("Eintrag Nummer: "+i));
+                liste.appendChild(listItem);
+            }
+        }
+    </script>
+</head>
+<body onload="load_body()">
+    <h1 id="Heading" >Hallo Welt!</h1>
+    <p>Dies ist eine Demo-Seite</p>
+    
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Slippers_%28AM_2015.51.15-2%29.jpg" height="100px"><p>Auckland Museum, <br>CC BY 4.0 via Wikimedia Commons</p>
+               
+    <input id="Inputvalue" onchange="showAlert()">
+    <button onclick="clicked()"">Aktion</button>
+    <button onclick="generate()"">Liste erstellen</button>
+    <ul id="list">
+
+    </ul>
+
+</body>
+</html>
