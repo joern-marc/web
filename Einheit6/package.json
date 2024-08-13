@@ -1,0 +1,13 @@
+{
+    "name": "Rechteck",
+    "version": "1.0.0",
+    "description": "Einfaches Beispiel",
+    "type": "module",
+
+    "scripts": {
+      "test": "mocha test.js"
+    },
+    "devDependencies": {
+      "mocha": "latest"
+    }
+  }
