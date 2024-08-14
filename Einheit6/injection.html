@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        let user = {username: "joe", password:"geheim"}
+
+        function search(){
+            let suche = document.querySelector("input").value;
+            if (suche.length<3){
+                alert ("Zu kurz");
+            } else {
+                let h1 = document.querySelector("h1");
+                h1.innerHTML = "Suche nach \""+suche+"\" nicht implementiert";
+                h1.style["background-color"] = "green"
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>My Search Tool</h1>
+    <input type="text"><button onclick="search()">Los</button>
+</body>
+</html>
