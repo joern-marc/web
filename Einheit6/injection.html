@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript">
+    <script type="text/javascript" src="../../DOMPurify/dist/purify.min.js"></script>
+    <script>    
         let user = {username: "joe", password:"geheim"}
 
         function search(){
@@ -10,7 +11,10 @@
                 alert ("Zu kurz");
             } else {
                 let h1 = document.querySelector("h1");
-                h1.innerHTML = "Suche nach \""+suche+"\" nicht implementiert";
+                const clean = DOMPurify.sanitize(suche);
+
+                //h1.innerHTML = "Suche nach \""+clean+"\" nicht implementiert";
+				h1.innerText = "Suche nach \""+suche+"\" nicht implementiert";
                 h1.style["background-color"] = "green"
 
             }

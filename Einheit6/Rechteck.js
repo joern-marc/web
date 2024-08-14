@@ -22,5 +22,9 @@ export class Rechteck {
         return this.breite*this.höhe;
     }
 
+    get isSquare(){
+        return (this.breite == this.höhe);
+    }
+
 
 }
